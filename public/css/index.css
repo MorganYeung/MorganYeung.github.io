@@ -369,7 +369,90 @@ body{ height: 100%;
 	vertical-align: middle;
 	text-align: center;
 }
-
+.proj4{
+	overflow: hidden;
+	background-image: url(../images/GCTbgpic.jpg);
+	background-repeat:no-repeat;
+	background-position: 0px 0px, 50% 50%;
+	background-size: 100%;
+	min-height: 200px;
+	width: 100%;
+	color: white;
+	height: 500px;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+.proj5{
+	overflow: hidden;
+	background-image: url(../images/GCTbgpic.jpg);
+	background-repeat:no-repeat;
+	background-position: 0px 0px, 50% 50%;
+	background-size: 100%;
+	min-height: 200px;
+	width: 100%;
+	color: white;
+	height: 500px;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+.proj6{
+	overflow: hidden;
+	background-image: url(../images/GCTbgpic.jpg);
+	background-repeat:no-repeat;
+	background-position: 0px 0px, 50% 50%;
+	background-size: 100%;
+	min-height: 200px;
+	width: 100%;
+	color: white;
+	height: 500px;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+.proj7{
+	overflow: hidden;
+	background-image: url(../images/GCTbgpic.jpg);
+	background-repeat:no-repeat;
+	background-position: 0px 0px, 50% 50%;
+	background-size: 100%;
+	min-height: 200px;
+	width: 100%;
+	color: white;
+	height: 500px;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+.proj8{
+	overflow: hidden;
+	background-image: url(../images/GCTbgpic.jpg);
+	background-repeat:no-repeat;
+	background-position: 0px 0px, 50% 50%;
+	background-size: 100%;
+	min-height: 200px;
+	width: 100%;
+	color: white;
+	height: 500px;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+.proj9{
+	overflow: hidden;
+	background-image: url(../images/GCTbgpic.jpg);
+	background-repeat:no-repeat;
+	background-position: 0px 0px, 50% 50%;
+	background-size: 100%;
+	min-height: 200px;
+	width: 100%;
+	color: white;
+	height: 500px;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
 #GCT_Logo{
 	width: auto;
 	height: 35%;
@@ -441,7 +524,7 @@ body{ height: 100%;
 	text-decoration: none;
 }
 
-@media (max-width: 1920px) {
+@media (max-width: 800px) {
 	#front{
 		background-attachment: scroll;
 	}
@@ -471,7 +554,7 @@ body{ height: 100%;
 
 	.proj1{
 		background-color: red;
-		background-image: none;
+		background-image: "public/images/f2_hs1.jpg";
 	}
 
 	.proj2{
