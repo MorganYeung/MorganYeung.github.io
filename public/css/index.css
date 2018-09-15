@@ -441,7 +441,7 @@ body{ height: 100%;
 	text-decoration: none;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1920px) {
 	#front{
 		background-attachment: scroll;
 	}
