@@ -470,15 +470,39 @@ body{ height: 100%;
 	}
 
 	.proj1{
-		background-color: gray;
+		background-color: red;
 		background-image: none;
 	}
 
 	.proj2{
-		background-color: gray;
+		background-color: yellow;
 		background-image: none;
 	}
 	.proj3{
+		background-color: orange;
+		background-image: none;
+	}
+	.proj4{
+		background-color: green;
+		background-image: none;
+	}
+	.proj5{
+		background-color: blue;
+		background-image: none;
+	}
+	.proj6{
+		background-color: purple;
+		background-image: none;
+	}
+	.proj7{
+		background-color: gray;
+		background-image: none;
+	}
+	.proj8{
+		background-color: gray;
+		background-image: none;
+	}
+	.proj9{
 		background-color: gray;
 		background-image: none;
 	}
