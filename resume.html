@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:500,200,700" rel="stylesheet">
+    <style>a,h1,h2,h3,h4,h5,h6,li,p{
+    font-family:Raleway,sans-serif
+}
+@page {
+    size: 8.5in 10in;
+}
+.resume{
+    background-color:#1f1f1f;
+    min-height:100vh
+}
+.resume .main{
+    height:100%;
+    width:800px;
+    background-color:#fff;
+    padding:0 25px;
+    margin:0 auto
+}
+.resume .resume-heading {
+    font-size:29pt;
+}
+.resume .main .header{
+    border-bottom:1px solid #ddd
+}
+.resume .main .header .page-title-container{
+    margin:0 auto;
+    text-align:center;
+    padding-bottom:0px
+}
+.resume .main .header .page-title{
+    font-size:40pt;
+    display:inline
+}
+.resume .main .header .page-title-first{
+    font-weight:400
+}
+.resume .main .header .page-title-last{
+    font-weight:200
+}
+.resume .main .header .header-icons{
+    text-align:center
+}
+.resume .main .header .header-icons .page-subhead{
+    margin:1rem 15px;
+    display:inline
+}
+.resume .main .header .fa{
+    padding-right:10px
+}
+.resume .main .indented{
+    padding-left:40px
+}
+.resume .main .category-row{
+    padding-bottom:2px
+}
+.resume .main .category-row .category{
+    margin-right:10px;
+    padding-left:5px;
+    padding-right:10px;
+    border-bottom:1px solid #ddd;
+    border-right:1px solid #ddd
+}
+.resume .main .category-row .category-row-title{
+    margin:.4rem 0
+}
+.resume .main .category-row .category-subtitle,.resume .main .category-row .category-title{
+    display:inline;
+    margin-top:10px;
+    margin-bottom:5px
+}
+.resume .main .category-row .category-bullets{
+    margin-top:2px
+}
+.resume .main .category-row li,.resume .main .category-row p{
+    font-size:smaller;
+    margin-bottom:5px;
+}
+.resume .main .category-row li {
+    margin-left:-20px;
+}
+category:last-of-type category-item:last-of-type .category,sidebar-category:last-of-type .category{
+    border-bottom:0!important;
+    padding-bottom:0!important;
+    margin-bottom:0!important
+}
+</style>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+    <!-- <script src="resume.js"></script> -->
+    <script>"use strict";angular.module("Resume",["ngMaterial"]).directive("resume",function(){return{restrict:"E",transclude:!0,template:'<div class="resume">\n      <section class="main" ng-transclude></section>\n    </div>'}}).directive("resumeHeading",function(){return{restrict:"E",scope:{firstName:"@",lastName:"@",phone:"@",email:"@",github:"@",linkedin:"@", website:"@"},template:'<div class="header">\n      <div class="page-title-container">\n        <h1 class="page-title page-title-first">{{firstName}}</h1>\n        <h1 class="page-title page-title-last">{{lastName}}</h1>\n      </div>\n      <div class="header-icons">\n    <span ng-if="phone" class="md-subhead page-subhead"><i class="fa fa-lg fa-phone"></i>{{phone}}</span>\n        <span ng-if="email" class="md-subhead page-subhead"><i class="fa fa-lg fa-envelope"></i>{{email}}</span>\n        <span ng-if="github" class="md-subhead page-subhead"><i class="fa fa-lg fa-github"></i>{{github}}</span>\n        <span ng-if="linkedin" class="md-subhead page-subhead"><i class="fa fa-lg fa-linkedin-square"></i>{{linkedin}}</span>\n <span ng-if="website" class="md-subhead page-subhead"><i class="fa fa-lg fa-code"></i>{{website}}</span>\n </div>\n    </div>'}}).directive("resumeBody",function(){return{restrict:"E",transclude:!0,template:'<div layout="row" ng-transclude></div>'}}).directive("resumeColumn",function(){return{restrict:"E",transclude:!0,template:"<div ng-transclude></div>"}}).directive("sidebarCategory",function(){return{restrict:"E",scope:{name:"@"},transclude:!0,template:'<div flex="" class="category-row">\n      <div class="category">\n        <h5 class="category-row-title">{{name}}</h5>\n        <ng-transclude></ng-transclude>\n      </div>\n    </div>'}}).directive("category",function(){return{restrict:"E",scope:{name:"@"},transclude:!0,template:'<div flex="" class="category-row">\n      <h4 class="category-row-title">{{name}}</h4>\n      <ng-transclude></ng-transclude>\n    </div>'}}).directive("categoryItem",function(){return{restrict:"E",scope:{title:"@",subtitle:"@"},transclude:!0,template:'<div class="category">\n        <h5 class="category-title md-body-2">{{title}}</h5>&nbsp;\n        <h5 class="category-subtitle md-caption">{{subtitle}}</h5>\n        <ul class="category-bullets" ng-transclude></ul>\n    </div>'}});</script>
+</head>
+
+<body ng-app="Resume" ng-cloak>
+    <resume>
+        <resume-heading first-name="Morgan"
+                        last-name="Yeung"
+                        linkedin="morganyeung"
+                        email="m26yeung@uwaterloo.ca"
+                        phone="416-560-1111"
+                        github="MorganYeung"
+                        >
+        </resume-heading>
+        <resume-body>
+            <resume-column flex="30" style="padding-top: 5px">
+                <category name="Skills">
+                    <sidebar-category name="Languages">
+                        <p>Python</p>
+                        <p>C/ C++</p>
+                        <p>LabVIEW</p>
+                        <p>SQL</p>
+                        <p>HTML5/CSS3</p>
+                    </sidebar-category>
+                    <sidebar-category name="Hardware">
+                        <p>ATmega/ ARM-based MCUs</p>
+                        <p>Serial, I2C, UART Communication</p>
+                        <p>CAN, LIN Communcation</p>
+                        <p>Actuators</p>
+                        <p>Sensors</p>
+                    </sidebar-category>
+                    <sidebar-category name="Technologies">
+                        <p>Git</p>
+       					        <p>JIRA</p>
+       					        <p>3D printers</p>
+       					        <p>Solidworks</p>
+       					        <p>Altium</p>
+                    </sidebar-category>
+                  </category>
+                  <category name="Education">
+                    <sidebar-category name="University of Waterloo">
+                        <p>B.Asc. Honours Mechatronics Engineering</p>
+                        <p>Graduating April 2021</p>
+                    </sidebar-category>
+                  </category>
+                  <category name="Personal Website">
+                    <sidebar-category>
+                      <p><a href="http://morganyeung.github.io">morganyeung.github.io</a></p>
+                    </sidebar-category>
+                  </category>
+                <category name= "Interests & Activities">
+                    <sidebar-category>
+                        <p>Fitness</p>
+                        <p>Photography</p>
+                    </sidebar-category>
+                </category>
+            </resume-column>
+            <resume-column flex="80" style="padding-top: 5px">
+                <category name="Professional Experience">
+                   <category-item title = "Embedded Software Developer" subtitle = "Helpwear (Sep 2019 - Dec 2019)">
+                      <li>Researched then implemented new microcontroller, adc and several new sensors for second generation of Heartwatch</li>
+                      <li>Developed Heartwatch Firmware in <strong>C/C++</strong> for external adc, automatic gain control, accelerometer, force sensor, user inputs and haptic motor</li>
+                      <li>Digital Signal processing in <strong>C</strong>, <strong>Python</strong> and <strong>Matlab</strong> for ECG signal detection, scaling and digagnosis</li>
+                      <li>Android Companion App Development for patient use as well as for internal development</li>
+                    </category-item>
+                    <category-item title = "Calibration Software Developer" subtitle = "Formlabs (Jan 2019 - Apr 2019)">
+                        <li>Programmed calibration routines in <strong>Python</strong> for the Form3 to ensure high-quality printer assembly, with smart workflows using sensor inputs to reduce cognitive load, user error and cycle times</li>
+                        <li>Measured and recorded the tilt about the Z axis in the Form3 tower to apply offsets while printing to ensure quality prints across the build volume</li>
+                        <li>Measured critical printer dimensions that defined the build plane then created and validated a workflow to rework printers to meet specifications</li>
+                        <li>Oversaw the IQC of printers by collaborating with several teams to corroborate specifications and calibrations for print quality, resulting in reduced precision errors.</li>
+                        <li>Developed <strong>Python</strong> scripts to pull data from SQL database to compare and analyze calibrations between printers using various jigs</li>
+                    </category-item>
+                    <category-item title = "Hardware Manufacturing Engineering" subtitle = "Formlabs (Jan 2018 - Aug 2018)">
+                      <li>Designed, built and programmed machines, testers and calibration fixtures and jigs for the Form2, Form3 3D printer and other auxiliary devices</li>
+                      <li>Designed an <strong>Atmega 328P</strong> pneumatic tester to detect improperly sealed resin cartridges. Used in factories with <strong>100%</strong> failure detection and false positive verification</li>
+                      <li>Designed a <strong>Raspberry Pi</strong> laser tester to ensure safety of Form2/Form3 cosmetic parts.  The tester was also used to verify laser power and transmittance on optical surfaces</li>
+                    </category-item>
+                    <category-item title = "Test Systems Engineering" subtitle = "Flex (May 2017 - Aug 2017) (Sept 2016 - Dec 2016)">
+                      <li>Designed and developed bench testers for automotive modules using custom prototyping boards</li>
+                      <li>Full System design of ATmega2560 system with LIN communication and a physical user interface for operators.  This solution lowered the BoM cost by <strong>75%.</strong></li>
+                      <li>Researched and experimented with machine vision and gantry systems for automating production line testers using <strong>Labview</strong> and <strong>LabWindows C</strong></li>
+                    </category-item>
+                </category>
+                <category name="Projects">
+                    <category-item title="Personal Media System" subtitle="Raspberry Pi/Arduino/Spotify API/Kivy GUI">
+                      <li>Created a <strong>Python</strong> application to enhance dorm apartments </li>
+                      <li>Used Spotify API, GPIO, and serial communication with Arduino to control LEDs with music</li>
+                      <li>Kivy GUI was used to make the application user friendly</li>
+                    </category-item>
+                    <!--<category-item title="Additive Manufacturing Design Team" subtitle="SmoothieBoard/Octoprint/STM32">
+                      <li>Built a 600 mm<sup>3</sup> fdm 3D printer with a Raspberry Pi running Octoprint to control a Smoothieboard </li>
+                      <li>Currently working on another 3D printer, developing <strong>C</strong> code on a STM32F401RE MCU </li>
+                      <li>Currently investigating 3D printing challenges and competitions</li>
+                    </category-item>-->
+                    <!-- <category-item title="UnbiasifyPlus" subtitle="Javascript/JQuery">
+                        <li>Winner of Coinsquare's Best Contribution to Open-Source Project (<a href="https://github.com/Unbiasify/unbiasify">Unbiasify</a>) at Hack the Valley 2018</li>
+                        <li>Implemented visual filters across popular social media platforms to eliminate bias within the user experience</li>
+                    </category-item> -->
+                    <!-- <category-item title="PathFinder" subtitle="Java/Android SDK">
+                        <li>Android application that displays user movement and navigational directions on an SVG diagram
+                        <li>Utilized <strong>Android Sensors API</strong> and finite state machines to generate a step/direction detection algorithm</li>
+                        <li>Implemented high pass and low pass filters to attenuate frequency signals, resulting in less than<strong> 5%</strong> error in output data</li>
+                        <li>Used <strong>A*</strong> search algorithm to find shortest path between origin and destination</li>
+                    </category-item> -->
+                </category>
+            </resume-column>
+        </resume-body>
+    </resume>
+
+</body>
+
+</html>
